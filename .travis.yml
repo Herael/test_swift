@@ -6,4 +6,8 @@ branches:
     - master
 notifications:
   email: false
-script: echo "cool?"
+  install:
+    - gem install bundler
+    - bundle install
+    #ios bonjour car c'est le nom de la lane
+script: bundle exec fastlane ios bonjour
